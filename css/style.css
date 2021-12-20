@@ -1,0 +1,749 @@
+* {
+    margin: 0;
+    padding: 0;
+    outline: 0;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+    display: inline-block;
+}
+
+ol,
+ul {
+    list-style: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+ol,
+ul,
+li {
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 1320px;
+    margin: 0 auto;
+}
+
+:root {
+    --hover: #1CB9C8;
+    --dm: 'DM Sans', sans-serif;
+    --philo: 'Philosopher', sans-serif;
+    --transition: all linear .3s;
+}
+
+/* ===================================================
+                COMMON CSS END
+====================================================*/
+
+/* ===================================================
+                HEADER CSS START
+====================================================*/
+#header {
+    background: rgba(27, 33, 47, 0.7);
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: 99999;
+}
+
+.header_part {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    height: 110px;
+}
+
+.header_logo a {
+    margin-top: 20px;
+}
+
+.header_right {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: end;
+}
+
+.header_right a {
+    color: #fff;
+    font-size: 20px;
+    font-weight: 400;
+    font-family: var(--dm);
+    line-height: 110px;
+    margin: 0 13px;
+    position: relative;
+
+}
+
+.header_right a i {
+    margin-left: 5px;
+    line-height: 110px;
+}
+
+.info:after {
+    content: '';
+    position: absolute;
+    top: 47px;
+    right: -13px;
+    width: 1px;
+    height: 20px;
+    background: rgba(27, 33, 47, 0.1);
+}
+
+.header_right a:last-child {
+    margin-right: 0;
+}
+
+/* ===================================================
+                HEADER CSS END
+====================================================*/
+/* ===================================================
+                NAV CSS START
+====================================================*/
+
+#nav {
+    height: 90px;
+    background: rgba(27, 33, 47, 0.7);
+    position: absolute;
+    top: 111px;
+    width: 100%;
+    z-index: 99999;
+}
+
+.nav_part {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.main_menu ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: start;
+}
+
+.main_menu ul li {
+    margin-right: 30px;
+    position: relative;
+}
+
+.main_menu ul li a {
+    color: #fff;
+    font-size: 20px;
+    font-weight: 500;
+    font-family: var(--dm);
+    text-transform: capitalize;
+    line-height: 90px;
+    transition: var(--transition);
+}
+
+.main_menu ul li a i {
+    margin-left: 5px;
+}
+
+.main_menu ul li ul {
+    background: #fff;
+    padding: 30px 0;
+    width: 190px;
+    border-bottom: 2px solid var(--hover);
+    transform: translateY(40%);
+    position: absolute;
+    top: 100%;
+    left: 0;
+    visibility: hidden;
+    opacity: 0;
+    transition: var(--transition);
+}
+
+.main_menu ul li ul li {
+    padding-left: 20px;
+}
+
+.main_menu ul li ul li a {
+    color: #1B212F;
+    font-size: 20px;
+    font-weight: 400;
+    font-family: var(--dm);
+    line-height: 40px;
+}
+
+.main_menu ul li ul li a span {
+    width: 4px;
+    height: 4px;
+    background: var(--hover);
+    border-radius: 50px;
+    display: inline-block;
+    line-height: 40px;
+    margin-right: 10px;
+    border: 5px solid #fff;
+    box-shadow: inset 0px 2px 4px 0px rgba(173, 136, 88, 0.4);
+    position: relative;
+}
+
+.main_menu ul li ul li a .home1::after {
+    content: '';
+    position: absolute;
+    top: 9px;
+    left: 1px;
+    width: 1px;
+    height: 27px;
+    background: #ededed;
+}
+
+.main_menu ul li a:hover {
+    color: var(--hover);
+}
+
+.main_menu ul li:hover ul {
+    visibility: visible;
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.nav_right {
+    display: flex;
+    flex-wrap: wrap;
+    line-height: 90px;
+}
+
+.nav_right ul {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.nav_right ul li a:last-child {
+    margin-right: 0;
+}
+
+.nav_right .social_icon ul {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.social_icon {
+    margin-right: 50px;
+}
+
+.nav_right a {
+    color: #fff;
+    font-size: 20px;
+    margin: 0 15px;
+    transition: var(--transition);
+}
+
+.nav_right ul li .b_search {
+    font-size: 30px;
+}
+
+.nav_right a:hover {
+    color: var(--hover);
+}
+
+.nav_right .social_icon ul li a:hover {
+    color: #1B212F;
+}
+
+/* ===================================================
+                NAV CSS END
+====================================================*/
+
+/* ===================================================
+                BANNER CSS START
+====================================================*/
+.banner_part {
+    padding: 440px 0 240px 0;
+}
+
+.banner_text {
+    width: 615px;
+    position: relative;
+}
+
+.banner_text h1 {
+    color: #fff;
+    font-size: 48px;
+    font-weight: 700;
+    font-family: var(--philo);
+    text-transform: uppercase;
+}
+
+.banner_text p {
+    color: #fff;
+    font-size: 24px;
+    font-weight: 400;
+    font-family: var(--dm);
+    line-height: 26px;
+    text-transform: lowercase;
+    margin-top: 30px;
+}
+
+.banner_text a {
+    color: #fff;
+    font-family: var(--dm);
+    font-size: 20px;
+    font-weight: 500;
+    text-transform: uppercase;
+    line-height: 50px;
+    margin-top: 30px;
+    padding: 0 35px;
+    border-radius: 50px;
+    background: linear-gradient(90deg, #1CB9C8 0%, #188EB2 100%);
+    transition: var(--transition);
+}
+
+.banner_text a:hover {
+    color: var(--hover);
+    background: #fff;
+    border: 1px solid var(--hover);
+}
+
+.banner_text .round {
+    position: absolute;
+    top: 115px;
+    right: -315px;
+    color: #fff;
+    font-size: 24px;
+    width: 130px;
+    height: 130px;
+    background: var(--hover);
+    border-radius: 50%;
+    text-align: center;
+    line-height: 130px;
+}
+
+
+/* ===================================================
+                BANNER CSS END
+====================================================*/
+
+/* ===================================================
+                ABOUT CSS START
+====================================================*/
+
+#about {
+    margin-top: 120px;
+}
+
+.about_part {
+    display: flex;
+}
+
+.about_left {
+    width: 600px;
+    position: relative;
+    margin-right: 70px;
+}
+
+.about_left .about_pic1 {
+    max-width: 350px;
+}
+
+.about_left .about_pic2 {
+    max-width: 300px;
+    position: absolute;
+    bottom: 35px;
+    right: 0;
+}
+
+.about_left .round {
+    position: absolute;
+    top: 5px;
+    right: 40px;
+    color: #fff;
+    font-size: 24px;
+    width: 130px;
+    height: 130px;
+    background: var(--hover);
+    border-radius: 50%;
+    text-align: center;
+    line-height: 130px;
+}
+
+
+.about_right {
+    width: 630px;
+}
+
+.about_right h3 {
+    color: var(--hover);
+    font-family: var(--dm);
+    font-size: 22px;
+    font-weight: 500;
+    text-transform: capitalize;
+}
+
+.about_right h2 {
+    color: #1B212F;
+    font-family: var(--philo);
+    font-size: 35px;
+    font-weight: 700;
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+
+.about_right p {
+    font-family: var(--dm);
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 23px;
+}
+
+.about_right ul li {
+    color: #505050;
+    font-family: var(--dm);
+    font-size: 22px;
+    font-weight: 700;
+    line-height: 29px;
+    margin-top: 25px;
+    padding-left: 40px;
+    position: relative;
+}
+
+.about_right ul li img {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+}
+
+.about_right a {
+    color: #fff;
+    font-family: var(--dm);
+    font-size: 20px;
+    font-weight: 500;
+    text-transform: uppercase;
+    line-height: 50px;
+    margin-top: 30px;
+    padding: 0 35px;
+    border-radius: 50px;
+    background: linear-gradient(90deg, #1CB9C8 0%, #188EB2 100%);
+    transition: var(--transition);
+}
+
+.about_right a:hover {
+    color: var(--hover);
+    background: #fff;
+    border: 1px solid var(--hover);
+}
+
+/* ===================================================
+                ABOUT CSS END
+====================================================*/
+
+/* ===================================================
+                LOGO CSS START
+====================================================*/
+#logo {
+    margin: 120px 0;
+}
+
+.logo_part {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.logo1 {
+    max-width: 80px;
+}
+
+.common_heading {
+    color: #1B212F;
+    font-family: var(--philo);
+    font-size: 48px;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.common_heading span {
+    color: var(--hover);
+    text-decoration: underline;
+}
+
+.logo_part .logo1 img {
+    filter: grayscale(100%);
+    transition: var(--transition);
+}
+
+.logo_part .logo1 img:hover {
+    filter: grayscale(0%);
+}
+
+/* ===================================================
+                LOGO CSS END
+====================================================*/
+
+/* ===================================================
+                SERVICE CSS START
+====================================================*/
+#service {
+    background: rgba(28, 186, 200, .06);
+    padding: 120px 0;
+    text-align: center;
+}
+
+#service .ser_a {
+    color: #fff;
+    font-family: var(--dm);
+    font-size: 20px;
+    font-weight: 500;
+    text-transform: uppercase;
+    line-height: 50px;
+    margin-top: 30px;
+    padding: 0 35px;
+    border-radius: 50px;
+    background: linear-gradient(90deg, #1CB9C8 0%, #188EB2 100%);
+    transition: var(--transition);
+}
+
+#service .ser_a:hover {
+    color: var(--hover);
+    background: #fff;
+    border: 1px solid var(--hover);
+}
+
+.center_heading {
+    text-align: center;
+}
+
+.center_heading h4 {
+    color: var(--hover);
+    font-family: var(--dm);
+    font-size: 22px;
+    font-weight: 500;
+}
+
+.center_heading h2 {
+    color: #1B212F;
+    font-family: var(--philo);
+    font-size: 48px;
+    font-weight: 700;
+    margin-top: 10px;
+    margin-bottom: 60px;
+}
+
+.service_part {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.server1 {
+    padding: 30px 0;
+    background: #fff;
+    width: 312px;
+    border-radius: 20px;
+    margin-bottom: 30px;
+    transition: var(--transition);
+    overflow: hidden;
+    position: relative;
+}
+
+.server1 img {
+    margin-bottom: 20px;
+    transition: var(--transition);
+}
+
+.server1 h3 {
+    color: #1B212F;
+    font-family: var(--philo);
+    font-size: 22px;
+    font-weight: 400;
+    text-transform: capitalize;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.server1 a {
+    color: #fff;
+    font-size: 10px;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    line-height: 20px;
+    margin-top: 20px;
+    background: var(--hover);
+    transition: var(--transition);
+}
+
+.server1:hover {
+    background: var(--hover);
+}
+
+.server1:hover img {
+    filter: brightness(0) invert(1);
+}
+
+.server1:hover h3 {
+    color: #fff;
+}
+
+.server1:hover a {
+    color: var(--hover);
+    background: #fff;
+}
+
+.server1:after {
+    position: absolute;
+    content: '';
+    width: 300px;
+    height: 300px;
+    bottom: -245px;
+    right: -220px;
+    border-radius: 50%;
+    background: #188eb2;
+    border: 15px solid rgba(255, 255, 255, 0.5);
+    transform: scale(0);
+    transition: var(--transition);
+}
+
+.server1:hover:after {
+    transform: scale(1);
+}
+
+/* ===================================================
+                SERVICE CSS END
+====================================================*/
+
+
+/* ===================================================
+                CHOOSE CSS START
+====================================================*/
+
+#choose {
+    padding: 120px 0;
+}
+
+.choose_part {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.cho_left {
+    max-width: 48%;
+}
+
+.choose_common {
+    margin-bottom: 50px;
+}
+
+.common_site h3 {
+    color: var(--hover);
+    font-family: var(--dm);
+    font-size: 22px;
+    font-weight: 500;
+    text-transform: capitalize;
+}
+
+.common_site h2 {
+    color: #1B212F;
+    font-family: var(--philo);
+    font-size: 35px;
+    font-weight: 700;
+    margin-bottom: 25px;
+    margin-top: 25px;
+}
+
+.common_site p {
+    font-family: var(--dm);
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 23px;
+}
+
+.cho_left ul {
+    margin-top: 30px;
+}
+
+.cho_left ul li {
+    line-height: 60px;
+    width: 585px;
+    padding-left: 30px;
+    border-left: 5px solid;
+    border-color: var(--hover);
+    margin-bottom: 30px;
+    position: relative;
+}
+
+.cho_left ul li i {
+    position: absolute;
+    right: 30px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.cho_right {
+    max-width: 48%;
+}
+
+.cho_right img {
+    max-width: 100%;
+}
+
+
+/* ===================================================
+                CHOOSE CSS END
+====================================================*/
+
+/* ===================================================
+                COUNTER CSS START
+====================================================*/
+#counter {
+    padding: 50px 0;
+    text-align: center;
+    color: #fff;
+}
+
+.counter_part {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.counter1 {
+    width: 150;
+}
+
+.counter1 h2 {
+    font-family: var(--philo);
+    font-size: 72px;
+    font-weight: 700;
+}
+
+.counter1 h5 {
+    font-family: var(--dm);
+    font-size: 20px;
+    font-weight: 500;
+    text-transform: uppercase;
+    margin-top: 10px;
+}
+
+/* ===================================================
+                COUNTER CSS END
+====================================================*/
+
+
+
+
+.testing{
+    margin: 120px;
+}
+
+/* ===================================================
+                HEADER CSS START
+====================================================*/
+
+/* ===================================================
+                HEADER CSS END
+====================================================*/
